@@ -1,17 +1,20 @@
 package com.curso.android.app.practica.proyecto_final
 
+import Comparartext.TextComparisonViewModel
+import junit.framework.TestCase.assertTrue
 import org.junit.Test
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
+class TextComparisonTes {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun comparartexto() {
+        //Definimos las variables
+        val texto1 = "hola"
+        val texto2 = "hola"
+
+        //hacemos la funcion
+        val resultado = TextComparisonViewModel().compareTexts(texto1, texto2)
+
+        //verifica si el resultado es correcto
+        assertTrue(resultado)
     }
 }
